@@ -9,9 +9,9 @@ provider "aws" {
 
 resource "aws_security_group" "allow_ssh" {
 
-  name        = "allow_ssh"
+  name        = "allow_ssh_v2+1+ggggg"
 
-  description = "Allow SSH inbound traffic"
+  description = "Allow SSH inbound traffic v2"
 
 
 
@@ -48,7 +48,7 @@ resource "aws_security_group" "allow_ssh" {
 
 
 resource "aws_instance" "my_ec2" {
-  ami                         = "ami-01e082ac2f79f3918"
+  ami                         = "ami-"
   instance_type               = var.instance_type
   vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
   associate_public_ip_address = true
